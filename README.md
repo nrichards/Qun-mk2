@@ -578,7 +578,7 @@ PARAM + [1-3] | Mute track
 PARAM + NO | Toggle Extra processing
 MODE PLAY + [1-8] | Recall preset bucket
 SEQ PLAY + [1-8] | Select Sequencer pattern
-SEQ PLAY + [1-8] , [1-8]...| Chain sequencer pattern(Pattern chaining). Keep pressing SEQ PLAY. 
+SEQ PLAY + [1-8] , [1-8]...| Chain sequencer pattern (Pattern chaining). Keep pressing SEQ PLAY. 
 SEQ PLAY + NO / OK | Move to previous / next Sequencer page
 SHIFT + SEQ PLAY +  NO / OK | Copy Sequencer page to previous / next Sequencer page
 SEQ PLAY + [1-8] + turn dial | Copy sequencer pattern to other pattern. If you want to cancel the operation, turn to the end, then "CANCEL" will be indicated as the destination. To initialize the bank data, turn the dial to "CLEAR". 
@@ -594,30 +594,60 @@ MODE PLAY + PARAM + Turn Dial | Parameter Lock Morphing
 
 A [tutorial video for the sequencer](https://www.youtube.com/watch?v=vZqdzkTQ1Mg) is available.
 
-The sequencer is an 8/16 step sequencer. One page has 8/16 steps and it can have up to 4 pages.
+Sequencer characteristics:
 
-The sequencer UI is influenced by analog 8 step pattern based sequencers. You turn can on and off patterns, and change parameters for the steps. 
+* Step-based: The sequencer is an 8/16 step sequencer. Each pattern page has 8/16 steps. 
+* Up to 4 pages can be added, providing a total of 32/64 steps.
+* The sequencer UI is influenced by analog 8 step pattern based sequencers. It allows you to turn patterns on/off and change parameters for each step.
 
-Sequencer data will be saved when you save tone presets, and it is saved with the Session. Each preset can have 8 sequencer patterns.
+Data saving:
 
-You can run multiple sequencer at the same time, up to three patterns, as normal parallel running or relative running. See PLY:SEQ CONFIG for detail.
+* Sequencer data will be saved when you save tone presets, and is saved inside the Session.
+* Each preset can have 8 sequencer patterns.
+
+Run simultaneous sequence patterns:
+
+* Parallel sequencing: Up to 3 sequencer patterns can run simultaneously in parallel mode.
+* Relative sequencing: Additionally, patterns can be sequenced in a relative manner.
+* See PLY:SEQ CONFIG for details.
 
 #### Sequencer live recording
 
-You can record live playing to the sequencer. Rec + SEQ PLAY to start recording. Play on Piano mode or play with an external MIDI keyboard to record notes. It's always overdubbing.  Note, Width(length), and velocity will be recorded.
-Sequencer playing position indicator changes when live recording.
-	Normal:
-	![seq_normal](./manual_images/seq_normal.png)
-	Live recording:
-	![seq_live](./manual_images/seq_live.png)
-Also, all LEDs are on for the even steps while live recording.
-Press SEQ PLAY to exit recording mode, and the sequencer will keep playing. Press SEQ PLAY again to stop the sequencer.
+You can record live playing to the sequencer.
 
-You can (re)enter recording mode while playing. Press Rec + SEQ Play to enter recording mode.
+How to start recording:
 
-A metronome click sound plays when live recording is ongoing. The metronome volume can be adjusted with REC + SEQ PLAY + Turn dial. The chained sequencer pattern will be reset when you change to another pattern.
+* Press REC + SEQ PLAY buttons simultaneously.
+* Play in Piano mode or with an external MIDI keyboard to record notes.
 
-When you are in sequencer live recording, changing sound engine parameters will be recorded as Parameter Locking.
+What is recorded:
+
+* Note pitch.
+* Note width (length / duration).
+* Note velocity.
+* It is always overdubbing.
+* Changed sound engine parameters will be recorded as Parameter Locking.
+
+Visual and auditory cues:
+
+* The sequencer playing position indicator changes during live recording.
+
+  Sequencer status | Display
+  -- | --
+  Normal | ![seq_normal](./manual_images/seq_normal.png)
+  Live recording | ![seq_live](./manual_images/seq_live.png)
+* All LEDs light up for even steps while live recording.
+* A metronome click plays during live recording. You can adjust its volume using REC + SEQ PLAY + turn dial.
+
+Exiting live recording:
+
+* Press SEQ PLAY to stop recording and continue sequencer playback.
+* Press SEQ PLAY again to stop the sequencer completely.
+
+Additionally:
+
+* You can re-enter live recording while the sequencer is playing. Press REC + SEQ PLAY to re-enter recording mode.
+* Changing patterns resets the chain sequencer pattern (Pattern chaining).
 
 #### Edit the current step while Sequencer live recording
 
@@ -800,7 +830,7 @@ Striped circle | 3 notes in the step (triplet).
 Striped square | 4 notes in the step (1/32th)
 
 ## PLY:SEQ VELOCITY / WIDTH / PROBABILITY
-Press one of the eight buttons and turn the dial, then it will modify velocity / width / probablity for each step.
+Press one of the eight buttons and turn the dial, then it will modify velocity / width / probability for each step.
 
 If you press NO or OK while pressing [1-8] button, you can edit sub-step parameter.
 
@@ -845,10 +875,10 @@ Button | Function
 4 | Sequencer loop count. Default is 8.  / Long press for Morph pattern.
 5 | BPM factor. Playing speed can be double, normal, 1/2, 1/4 or 1/8.  / Long press for note Lower Limit 
 6 | Velocity accent period (steps). / Long press for 8th swing 
-7 | Velocity for the non-accent notes. / Long presso for note Upper Limit 
+7 | Velocity for the non-accent notes. / Long press for note Upper Limit 
 8 | Velocity accent Period Offset 
 
-Velocity period settings (Button 6 - 8) provide a convenient way to make rythmic velocity.
+Velocity period settings (Button 6 - 8) provide a convenient way to make rhythmic velocity.
 
 Sequencer MIDI channel out is useful setting with external synthesizer. When you set it, the sequencer starts to emit MIDI out signal to external synthesizers. If you set Channel + "N" such as "1N", it won't trigger internal sound engine.
 
@@ -857,13 +887,13 @@ Morph pattern is used for Parameter Lock Morphing. Please refer "Parameter Lock 
 Note lower and upper limit will limit the range of note. When the sequencer received a note that is out of the range, it will shift octave to fit within the range. It is useful to prevent to go too high note with randomization. It's also will do automated chord inversion.
 
 ### Running multiple sequence patterns
-You can run multiple sequeence patterns at the same time, up to 3 patterns by setting "2nd pattern" (Long press button 2) or/and "3rd pattern" (Long press button 3), or using the shortcut shown below.
+You can run multiple sequence patterns at the same time -- up to 3 patterns -- by setting "2nd pattern" (Long press button 2) or/and "3rd pattern" (Long press button 3), or using the shortcut shown below.
 
 Button | Function
 ------------ | -------------
 2 in SEQ CFG sub-mode | Long press for 2nd pattern 
 3 in SEQ CFG sub-mode | Long press for 3rd pattern 
-SEQ PLAY + B[1-8] (Primary pattern) + B[1-8] (2nd pattern) in any sub-mode | This is a shortcut to select parallel pattern select. If you press another button while you keep pressing the primary pattern button, then it will be for the 3rd pattern(If you release the primary pattern button, it will become **Pattern chaining**). Assign the same pattern one more time to erase the assignment. Only normal parallel pattern ("R0") can be selected. 
+SEQ PLAY + B[1-8] (Primary pattern) + B[1-8] (2nd pattern) in any sub-mode | This is a shortcut to select parallel pattern select. If you press another button while you keep pressing the primary pattern button, then it will be for the 3rd pattern (If you release the primary pattern button, it will become **Pattern chaining**). Assign the same pattern one more time to erase the assignment. Only normal parallel pattern ("R0") can be selected. 
 
 The status is shown like this:
 
