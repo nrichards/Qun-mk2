@@ -594,22 +594,13 @@ MODE PLAY + PARAM + Turn Dial | Parameter Lock Morphing
 
 A [tutorial video for the sequencer](https://www.youtube.com/watch?v=vZqdzkTQ1Mg) is available.
 
-Sequencer characteristics:
+The sequencer is an 8/16 step sequencer. One page has 8/16 steps and each pattern can have up to 4 pages.
 
-* Step-based: The sequencer is an 8/16 step sequencer. Each pattern page has 8/16 steps. 
-* Up to 4 pages can be added, providing a total of 32/64 steps.
-* The sequencer UI is influenced by analog 8 step pattern based sequencers. It allows you to turn patterns on/off and change parameters for each step.
+The sequencer UI is influenced by analog 8 step pattern based sequencers, allowing pattern on/off, and parameter changes for each step.
 
-Data saving:
+Sequencer data will be saved when you save tone presets, and is saved along with the Session. Each preset can have 8 sequencer patterns.
 
-* Sequencer data will be saved when you save tone presets, and is saved inside the Session.
-* Each preset can have 8 sequencer patterns.
-
-Run simultaneous sequence patterns:
-
-* Parallel sequencing: Up to 3 sequencer patterns can run simultaneously in parallel mode.
-* Relative sequencing: Additionally, patterns can be sequenced in a relative manner.
-* See PLY:SEQ CONFIG for details.
+You can run multiple sequences at the same time. Up to three patterns can be ran normally in parallel, or relative. See PLY:SEQ CONFIG for details.
 
 #### Sequencer live recording
 
