@@ -184,17 +184,28 @@ When trying to switch Bucket, while pressing MODE PLAY | The current selected Bu
 ## MIDI learning
 
 Assigning proper MIDI CC to your MIDI keyboard is recommended for frequently used parameters, however, you can override MIDI CC temporarily by the following operation:
+Assigning proper MIDI CC in your MIDI keyboard is recommended for frequently used parameters -- see the [Qun CC list](#supported-midi-control-numbers) for details. 
+
+Alternatively, you can override MIDI CC temporarily and with the following simple operation:
+
+*Workflow: Control Qun parameters from external MIDI keyboards*
 
 1. In Parameter mode, press and hold the corresponding parameter button for a long time -- about 3 sec. For example, OSC1's Pulse Width which is button 2 in OSC1 sub-mode.
-2. Then the parameter name and value will be shown on the screen. Keep pressing the button another 3 sec.
-3. Send MIDI CC signal from your MIDI keyboard: Turn a knob or move a fader. The sent MIDI CC# will control the assigned parameter.
+   1. See the parameter name and value shown on the screen. 
+2. Keep pressing the button another 3 seconds.
+3. Send a MIDI CC signal from your MIDI keyboard, e.g. turn a knob or move a fader. 
+4. Release the parameter button. 
+   1. This MIDI CC# has been learned. 
+5. Send this MIDI CC# from your keyboard to see it control the assigned parameter. 
+   1. Note that this assignment will be disabled when the device is rebooted.
 
-Once the parameter is assigned, then "*" mark is indicated before the CC number. Original CC assignment is still working. It won't be affected with MIDI dumping.
+Once the parameter is assigned, then asterisk (*) mark is indicated before the CC number. Original CC assignment is still working. It won't be affected with MIDI dumping.
+
 MIDI learning will take any MIDI channel. For example, even if you set the device to receive MIDI channel 2, MIDI learning can receive CC# for channel 3, or any other channels.
 
 To cancel the override, do the same operation again.
 
-To avoid confusion, this setting won't be saved.
+To avoid confusion, this temporary setting won't be saved.
 
 ## Session
 
