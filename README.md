@@ -183,7 +183,6 @@ When trying to switch Bucket, while pressing MODE PLAY | The current selected Bu
 
 ## MIDI learning
 
-Assigning proper MIDI CC to your MIDI keyboard is recommended for frequently used parameters, however, you can override MIDI CC temporarily by the following operation:
 Assigning proper MIDI CC in your MIDI keyboard is recommended for frequently used parameters -- see the [Qun CC list](#supported-midi-control-numbers) for details. 
 
 Alternatively, you can override MIDI CC temporarily and with the following simple operation:
